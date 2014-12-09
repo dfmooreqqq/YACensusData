@@ -1,10 +1,14 @@
-
 workingdir<-paste("C:\\Users", Sys.getenv("USERNAME"), "Documents\\GitHub\\YACensusData", sep = "\\")
 setwd(workingdir)
 
 listofzipfiles <- list.files(pattern=".zip")
 
+pb<-txtProgressBar(1, length(listofzipfiles), style=3)
+pbi<-0
+
 for (i in listofzipfiles) {
+    pbi<-pbi+1
+    setTxtProgressBar(pb, pbi)
     zipdir <- tempfile()
     dir.create(zipdir)
     unzip(i, exdir = zipdir)
