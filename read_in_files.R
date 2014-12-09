@@ -17,7 +17,7 @@ for (i in listofzipfiles) {
     k<-0
     for (j in list.files(path = zipdir, pattern=".csv")){
         k<-k+1
-        filestr = paste(b, as.character(k), sep="_")
+        filestr = paste(b,j, sep="_")
         assign(filestr,read.csv(paste(zipdir,j, sep="\\")))
     }
 }
