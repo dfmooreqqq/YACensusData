@@ -19,8 +19,8 @@ Codebook for Census Explorer - Young Adults Then and Now
    population18To34_pme:     Population age 18 to 34, percent margin of error
 
    white:                    White, Non-Hispanic, age 18 to 34
-   white_p:                  Percent of population age 18 to 34 who are White, Non-Hispanic
-   white_me:                 White, Non-Hispanic, age 18 to 34, margin of error
+	 white_p:                  Percent of population age 18 to 34 who are White, Non-Hispanic
+	 white_me:                 White, Non-Hispanic, age 18 to 34, margin of error
    white_pme:                White, Non-Hispanic, age 18 to 34, percent margin of error
 
    minority:                 Minority, age 18 to 34
