@@ -1,6 +1,6 @@
 ## Environment setup
 # Load packages.
-packages <- c("gdata")
+packages <- c("gdata", "ggplot2")
 packages <- lapply(packages, FUN = function(x) {
     if (!require(x, character.only = TRUE)) {
         install.packages(x)
@@ -40,3 +40,17 @@ YA_Metro_data<-combine(YA_Metro_CSV_YA_1980_310.csv, YA_Metro_CSV_YA_1990_310.cs
 YA_State_data<-combine(YA_State_CSV_YA_1980_040.csv, YA_State_CSV_YA_1990_040.csv, YA_State_CSV_YA_2000_040.csv, YA_State_CSV_YA_2009_2013_040.csv)
 YA_Tract_data<-combine(YA_Tract_CSV_YA_1980_140.csv, YA_Tract_CSV_YA_1990_140.csv, YA_Tract_CSV_YA_2000_140.csv, YA_Tract_CSV_YA_2009_2013_140.csv)
 YA_US_data<-combine(YA_US_CSV_YA_1980_010.csv, YA_US_CSV_YA_1990_010.csv, YA_US_CSV_YA_2000_010.csv, YA_US_CSV_YA_2009_2013_010.csv)
+
+
+dt = YA_US_data
+qplot(source, liveWithParent_p, data = dt)
+
+dt = YA_Metro_data
+qplot(source, liveWithParent_p, data = dt)
+
+dt = YA_State_data
+qplot(source, liveWithParent_p, data = dt)
+
+dt = YA_County_data
+qplot(source, liveWithParent_p, data = dt)
+
